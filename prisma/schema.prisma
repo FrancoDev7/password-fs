@@ -11,20 +11,20 @@ datasource db {
 
 
 model User {
-  id string @id @default(auto() uuid())
-  username String @unique
-  email String @unique
-  name String? 
-  hasghedPassword String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id                String @id @default( uuid())
+  username          String @unique
+  email             String @unique
+  name              String? 
+  hasghedPassword   String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
 
   passwords Passwords[]
 
 }
 
 model Passwords {
-  id string @id @default((auto) uuid())
+  id String @id @default( uuid())
   name String?
   category String
   username String?
